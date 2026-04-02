@@ -12,7 +12,7 @@ function scrollFunction() {
 
         
          document.getElementById("navbar").style.opacity = "0%"
-        document.getElementById("navbar").style.top = "-50px";
+        document.getElementById("navbar").style.top = "-75px";
 
     
   } else {

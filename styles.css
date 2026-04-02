@@ -11,7 +11,8 @@
   overflow: hidden;
   background-color: #f1f1f1;
   padding: 20px 10px;
-  transition: 0.4s; /* Transition effect when sliding down (and up) */
+  /* transition: 0.4s;  */
+  /* Transition effect when sliding down (and up) */
 }
 
 /* Style the header links */
@@ -57,7 +58,7 @@
   margin-top: 85px;
   top: 0; /* Stay on top */
   width: 100%; /* Full width */
-  transition: 0.3s; /* Transition effect when sliding down (and up) */
+  transition: 0.5s; /* Transition effect when sliding down (and up) */
 }
 
 /* Style the navbar links */
