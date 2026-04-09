@@ -1,6 +1,4 @@
-<!Doctype html>
-<html>
-<style>
+
 body{
     background-color: white;
 }
@@ -16,9 +14,9 @@ p{
     font-size: 20px;
 }
 .Button-group{
-    background-color: white;
-    border: none;
-    color: white;
+    background-color: red;
+    border: 5px solid black;
+    color: rgb(255, 255, 255);
     padding: 10px 20px;
     text-align: left;
     display: inline;
@@ -29,22 +27,4 @@ p{
     
 }
 
-  /*(Redo, save & continue)-->
-    .Button-group <button>{
-            background-color: #007bff;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            }
-            <button type = "button" class = "btn btn-primary">Back</button>
-            <button type="button" class="btn btn-primary">Save & Continue</button>
-        
-        </button>
-        */
 
