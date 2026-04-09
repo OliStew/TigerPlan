@@ -8,7 +8,7 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
          document.getElementsByClassName("header")[0].style.padding = "10px 10px";
-        document.getElementById("logo").style.fontSize = "15px";
+        document.getElementById("title").style.fontSize = "15px";
 
         
          document.getElementById("navbar").style.opacity = "0%"
@@ -17,7 +17,7 @@ function scrollFunction() {
     
   } else {
         document.getElementsByClassName("header")[0].style.padding = "20px 10px";
-        document.getElementById("logo").style.fontSize = "25px";
+        document.getElementById("title").style.fontSize = "25px";
 
         document.getElementById("navbar").style.opacity = "100%"
         document.getElementById("navbar").style.top = "0px";
