@@ -1,17 +1,18 @@
 
-button{
+.btn.btn-secondary, .btn.btn-primary{
     font-family: Arial, Times, serif;
     font-size: larger;
     border: 3px solid black;
-    padding: 10px 20px;
     cursor: pointer;
     height: 36px;
     width: 150px;
 }
+<!--Button-->
 .btn.btn-secondary{
     background-color: #999999;
     color: white;
     text-align: left;
+    
 
 }
 .btn.btn-primary{
@@ -20,20 +21,32 @@ button{
     height: 55px;
     width: 160px;
     text-align: right;
-    margin-right: 100px;
+    
+
 }
-.btn.btn-primary:hover{
-    background-color: #461d7c;
-    color: white;
-    text-align: right;
-    opacity: 0.5;
-}
+<!--Hover-->
 .btn.btn.btn-secondary:hover{
     background-color: #999999;
     color: white;
     text-align: left;
     border: 3px solid #999999;
     opacity: 0.5;
+}
+
+.btn.btn-primary:hover{
+    background-color: #461d7c;
+    color:white;
+    text-align: right;
+    opacity: 0.5;
+    gap: 20px;
+}
+
+<!--Active-->
+.btn.btn.btn-secondary:active{
+    background-color: #999999;
+    color: white;
+    text-align: left;
+    border: 3px solid #999999;
 }
 
 .btn.btn-primary:active{
@@ -44,13 +57,6 @@ button{
     text-align: right;
     margin-right: 100px;
     border: 3px solid #461d7c;
-}
-
-.btn.btn.btn-secondary:active{
-    background-color: #999999;
-    color: white;
-    text-align: left;
-    border: 3px solid #999999;
 }
 
 
