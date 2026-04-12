@@ -1,3 +1,377 @@
 /* This will be the Global CSS File. Anything that will need to be consist between ALL pages will be put here. 
     Anything else create your own CSS file and link it in the HTML file.
     Of course first test it in your own file, but once you are sure it works, put it here. */
+
+/* Style the header with a grey background and some padding */
+.header {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  overflow: hidden;
+  background-color: #461D7C;
+  padding: 20px 10px;
+  transition: 0.4s;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  /* Transition effect when sliding down (and up) */
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  color: #FDD023;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header #logo {
+  float: left;
+  margin-left: 150px;
+  color: #000000;
+  max-width: 50px;
+  max-height: 80px;
+
+}
+
+.header-right {
+  float: right;
+}
+
+.header-right a {
+  float: right;
+  color: #aaaaaa7e;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+/* Style the title link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header #title {
+  font-size: 25px;
+  line-height: 25px;
+  transition: 0.4s;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  color: #FDD023;
+  transition: 0.3s;
+}
+
+.header #title:hover {
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+#navbar {
+  background-color: #faf5ff;
+  /* Black background color */
+  position: fixed;
+  /* Make it stick/fixed */
+  margin-top: 85px;
+  top: 0;
+  /* Stay on top */
+  width: 100%;
+  /* Full width */
+  transition: 0.5s;
+  /* Transition effect when sliding down (and up) */
+
+  box-shadow: 0px 10px 10px #00000033;
+
+}
+
+/* Style the navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: #461D7C;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 25%;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  background-color: #D6C9E3;
+  border-top: #FDD023 15px solid;
+  transition: 0.3s;
+}
+
+.content1 {
+  margin-top: 85px;
+  padding: 125px;
+  text-align: center;
+  align-self: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(to bottom right, #461D7C, #5a2c96);
+}
+
+.content1 #logo {
+  max-width: 200px;
+  max-height: 320px;
+}
+
+.content1 h2 {
+  text-align: center;
+  align-self: center;
+  font-weight: 900;
+  font-size: 50px;
+  color: #faf5ff;
+  text-shadow: 0px 10px 10px #00000033;
+}
+
+.content1 .p1 {
+  font-size: 15px;
+  margin-top: 30px;
+  color: #faf5ff;
+}
+
+.content1 .p1 p {
+  line-height: 0.5;
+}
+
+.content1 button {
+  border-radius: 12px;
+  border: none;
+  text-decoration: none;
+  padding: 5px 15px;
+  margin-top: 5px;
+  margin: 20px;
+  font-size: 15px;
+  background-color: #FDD023;
+  color: #461D7C;
+}
+
+.content1 button:hover {
+  background-color: #ffb11f;
+  color: #faf5ff;
+  transition: 0.3s;
+}
+
+.content2 {
+  padding: 75px;
+  text-align: center;
+  align-self: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #faf5ff;
+}
+
+.content2 h3 {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.content2 .p2 {
+  margin-top: 25px;
+}
+
+.content2 .p2 p {
+  line-height: 0.7;
+  color: #808080;
+}
+
+.content3 {
+  padding: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f6f1fc;
+}
+
+.content3 h3 {
+  font-weight: 700;
+  font-size: 40px;
+  text-align: center;
+}
+
+.content3 .containers {
+
+  font-size: 15px;
+  line-height: 15px;
+  display: flex;
+  padding: 50px;
+  justify-content: center;
+  gap: 15px;
+
+}
+
+.content3 .container {
+  background-color: #faf5ff;
+  border-radius: 12px;
+  border: 2px solid;
+  border-color: #c9c8c8;
+  height: 250px;
+  width: 250px;
+}
+
+.content3 .container:hover {
+  border-color: #461D7C;
+  transition: 0.3s;
+
+}
+
+.content3 #logo {
+  max-width: 70px;
+  max-height: 100px;
+}
+
+.content3 h5 {
+  text-align: left;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.content3 p {
+  text-align: left;
+  color: #808080;
+  font-size: 15px;
+}
+
+
+.content3 .buttons {
+  border-radius: 12px;
+  border: 1.5px solid;
+  border-color: #c9c8c8;
+  font-size: 13px;
+  padding: 5px 50px;
+  /* margin-top: 25px; */
+  background-color: #faf5ff;
+}
+
+.content3 .buttons:hover {
+  background-color: #dddddd;
+  transition: 0.3s;
+}
+
+.content4 {
+  padding: 75px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #faf5ff;
+}
+
+.content4 h6 {
+  text-align: center;
+  align-self: center;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.content4 .boxes {
+  margin-top: 50px;
+  display: flex;
+  padding: 25px;
+  justify-content: center;
+  gap: 30px;
+}
+
+.content4 #logo {
+  margin-bottom: 8px;
+  max-width: 50px;
+  max-height: 80px;
+}
+
+
+.content4 h8 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+
+.content4 p {
+  margin-top: 5px;
+  margin-left: 35px;
+  margin-bottom: 30px;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #808080;
+}
+
+.content5 {
+  padding: 50px;
+  text-align: center;
+  align-self: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #461D7C;
+}
+
+.content5 h3 {
+  font-weight: 700;
+  font-size: 40px;
+  color: #faf5ff;
+}
+
+.content5 p {
+  margin-top: 25px;
+  line-height: 0.7;
+  color: #faf5ff;
+}
+
+.content5 button {
+  border-radius: 12px;
+  border: none;
+  text-decoration: none;
+  padding: 5px 15px;
+  margin-top: 5px;
+  margin: 20px;
+  font-size: 15px;
+  background-color: #FDD023;
+  color: #461D7C;
+}
+
+.content5 button:hover {
+  background-color: #ffb11f;
+  color: #faf5ff;
+  transition: 0.3s;
+}
+
+.content6 {
+  padding: 25px;
+  margin-top: 50px;
+  text-align: center;
+  align-self: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #461D7C;
+  color: #faf5ff;
+}
+
+.content6 h3 {
+  font-weight: 600px;
+  font-size: 15px;
+}
+
+.content6 p {
+  margin-top: 25px;
+  line-height: 0.7px;
+  font-size: 10px;
+  font-weight: 500px;
+  color: #c9c8c8;
+}
+
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  #navbar {
+    padding: 20px 10px !important;
+    /* Use !important to make sure that JavaScript doesn't override the padding on small screens */
+  }
+
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header-right {
+    float: none;
+  }
+}
