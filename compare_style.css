@@ -1,4 +1,4 @@
-<style>
+
 button{
     font-family: Arial, Times, serif;
     font-size: larger;
@@ -52,10 +52,5 @@ button{
     text-align: left;
     border: 3px solid #999999;
 }
-
-</style>
-
-<button class="btn btn-secondary"> Redo </button>
-<button class="btn btn-primary"> Compare and Save </button>
 
 
