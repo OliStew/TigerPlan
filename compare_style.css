@@ -1,62 +1,114 @@
 
-.btn.btn-secondary, .btn.btn-primary{
+.Welcome .welcomebtn{
     font-family: Arial, Times, serif;
-    font-size: larger;
-    border: 3px solid black;
+    font-size: xx-large;
+    border: 3px solid rgb(0, 0, 0);
     cursor: pointer;
-    height: 36px;
-    width: 150px;
+
+    padding: 20px 10px;
+    margin-top: 15%;
+    display: flex;
+    gap: 600px;
+    background-color: black;
+    
+    
 }
+ 
+
 <!--Button-->
-.btn.btn-secondary{
+.Welcome .btn-secondary{
     background-color: #999999;
     color: white;
-    text-align: left;
-    
+    text-align: center;
+
 
 }
-.btn.btn-primary{
+.Welcome .btn-primary{
     background-color: #461d7c;
     color: white;
-    height: 55px;
-    width: 160px;
-    text-align: right;
-    
+    text-align: center;
 
 }
 <!--Hover-->
-.btn.btn.btn-secondary:hover{
+.Welcome .btn-secondary:hover{
     background-color: #999999;
     color: white;
-    text-align: left;
+    text-align: center;
     border: 3px solid #999999;
     opacity: 0.5;
 }
 
-.btn.btn-primary:hover{
+.Welcome .btn-primary:hover{
     background-color: #461d7c;
     color:white;
-    text-align: right;
+    text-align: center;
     opacity: 0.5;
-    gap: 1000px;
+    
 }
 
 <!--Active-->
-.btn.btn.btn-secondary:active{
+.Welcome .btn-secondary:active{
     background-color: #999999;
     color: white;
-    text-align: left;
+    text-align: center;
     border: 3px solid #999999;
 }
 
-.btn.btn-primary:active{
+.Welcome .btn-primary:active{
     background-color: #461d7c;
     color: white;
     height: 55px;
     width: 160px;
-    text-align: right;
-    margin-right: 100px;
+    text-align: center;
     border: 3px solid #461d7c;
 }
+<!Major-->
+.Major {
+    
+  width: 200px;
+  height: 150px;
+  overflow-y: auto;
+}
 
+.Major a {
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
 
+.Major a:hover {
+  background-color: #FDD023;
+}
+
+.Major a.active {
+  background-color: #FDD023;
+  color: white;
+
+}
+<!Minor-->
+.Minor{
+    
+  width: 200px;
+  height: 150px;
+  overflow-y: auto;
+}
+
+.Minor a {
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.Minor a:hover {
+  background-color: #FDD023;
+}
+
+.Minor a.active {
+  background-color: #FDD023;
+  color: white;
+
+}
