@@ -7,7 +7,9 @@
 
   <title>Welcome to The Tiger Plan</title>
 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="careerSearchStyles.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
@@ -31,6 +33,49 @@
     <a href="careerSearchIndex.html">Careers</a>
     <a href="#ratings">Ratings</a>
   </div>
+
+  <!-- Main Content-->
+  <div class="selectContent">
+
+    <div id="topContent">
+      <h1>Career Pathways</h1>
+      <p>Explore career opportunities, required skills, and pathways for different majors</p>
+    </div>
+
+    <div class="searchContainer">
+
+      <p id="p1">Select Your Major</p>
+      <p id="p2">Choose a major to see related career paths and opportunities</p>
+
+      <div class="dropdown1">
+        <input type="text" placeholder="Search for a major..." id="majorInput" onkeyup="filterMajors()"
+          onclick="showMajors()"> <i class="material-icons searchArrow">keyboard_arrow_down</i>
+      </div>
+    </div>
+
+       <div id="majorDropdown" class="dropdown-content">
+          <a href="#">Computer Science</a>
+          <a href="#">Business Administration</a>
+          <a href="#">Biology</a>
+          <a href="#">Engineering</a>
+          <a href="#">Economics</a>
+        </div>
+  </div>
+
+  <!-- <div class="careerContent">
+   
+</div> -->
+
+  <div class="placeHolder">
+    <h1>Select a major above to explore career opportunities<h1>
+  </div>
+
+
+  <script src="script.js"></script>
+  <script src="careerSearchScript.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 
 </body>
 
