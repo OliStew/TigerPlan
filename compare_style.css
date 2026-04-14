@@ -3,9 +3,51 @@
     font-family: Arial, Times, serif;
     padding: 100px;
     margin-top: 10%;
-    background-color: black;
+    /* background-color: rgb(117, 117, 117); */
     
 }
+
+
+.Welcome .title{
+    text-align: center;
+    
+}
+
+/* to costumize buttons, use the name of the tag which is <button> not the name of the class*/
+.Welcome button{
+   border-radius: 12px;
+  border: none;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin-top: 5px;
+  margin: 20px;
+  font-size: 20px;
+  color:white;
+    
+}
+
+.Welcome .welcomebtn .btn-secondary{
+   float: left;
+   background-color: #FDD023;
+  
+}
+
+.Welcome .welcomebtn .btn-primary{
+   float: right;
+   background-color: #461D7C;
+  
+}
+
+.Welcome .btn-secondary:hover{
+   background-color: #e0b31e;
+    
+}
+
+.Welcome .btn-primary:hover{
+   background-color: #230e3f;
+    
+}
+
 
 /* Old code */
 /* .Welcome .welcomebtn{
