@@ -1,11 +1,12 @@
 
-import { cardDataComputerScientist } from './careerSearchDataBase.js';
-
+import * as allData from './careerSearchDataBase.js';
 const postContainer = document.querySelector(".careerContent");
 
-const postMethods = () => {
+export const postMethods = (dataArray) => {
 
-    cardDataComputerScientist.map((postData) => {
+    postContainer.innerHTML = ""; 
+
+    dataArray.map((postData) => {
         const postElement = document.createElement('div');
         postElement.classList.add("card");
         postElement.innerHTML = ` 
@@ -21,4 +22,4 @@ const postMethods = () => {
     })
 }
 
-postMethods();
+

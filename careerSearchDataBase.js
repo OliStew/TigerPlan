@@ -1,4 +1,4 @@
-export const cardDataComputerScientist = [
+export const cardDataComputerScience = [
     {
         jobName:'quatum scientist',
         jobDetails: 'Super fast Conputer',
@@ -19,7 +19,7 @@ export const cardDataComputerScientist = [
 
 ];
 
-export const cardDataBiologist = [
+export const cardDataBiology = [
      {
         jobName:'fisherman',
         jobDetails: 'Gets the fish',
