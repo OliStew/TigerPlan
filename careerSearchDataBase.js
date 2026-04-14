@@ -36,7 +36,7 @@ export const cardDataBiology = [
         jobPay: '500,000-600,000',
         jobSkill: 'eye-chart temperature'
         
-    }
+    },
     {
         jobName:'Forensic Scientist',
         jobDetails: 'Apply scientific principles, techniques and laboratory methods to analyze phyical evidence from crime scenes.',
