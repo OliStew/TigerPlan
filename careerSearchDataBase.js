@@ -1,42 +1,50 @@
 export const cardDataComputerScience = [
     {
-        jobName:'quatum scientist',
-        jobDetails: 'Super fast Conputer',
-        jobPay: '100,000-200,000',
-        jobSkill: 'quatum html css python'
+        jobName:'Entry-Level Full Stack Developer',
+        jobDetails: 'Assists in designing, developing, testing, and maintaining software applications.',
+        jobPay: '$30-40/hr',
+        jobSkill: 'Basic knowledge of programming languages (Java, Python, C++, etc.)'
     },
 
      {
-        jobName:'technition',
-        jobDetails: 'do the tech real good',
-        jobPay: '500,000-600,000',
-        jobSkill: 'html css c++'
+        jobName:'Software Developer',
+        jobDetails: 'This position is a high impact, executive sponsored talent acceleration program designed to rapidly onboard, enable, and activate early career professionals.',
+        jobPay: '$70-80K/yr',
+        jobSkill: 'Agentic AI solutions, automation concepts, or AI enabled workflows.'
     },
 
      {
-        jobName:'robot',
-        jobDetails: 'wire-back',
-        jobPay: '0-1',
-        jobSkill: 'chatgpt banana'
+        jobName:'Digital Asset Manager',
+        jobDetails: 'Owning and maintaining the Digital Asset Management (DAM) system ensuring its optimal functionality.',
+        jobPay: '$30-40/hr',
+        jobSkill: 'Ability to review usage reports and analytics to improve asset performance and system efficiency.'
     }
 
 ];
 
 export const cardDataBiology = [
      {
-        jobName:'fisherman',
-        jobDetails: 'Gets the fish',
-        jobPay: '200,000-300,000',
-        jobSkill: 'bait hook boat'
+        jobName:'Medicine Physicaian',
+        jobDetails: 'provide direct care for patients while following established protocols and procedures for patient care standards.',
+        jobPay: '$208-323K/yr',
+        jobSkill: 'Demonstrates strong interpersonal skills, excellent clinical judgement, communication skills, and quality assessment skills.'
     },
 
      {
-        jobName:'doctor',
+        jobName:'Nurse',
         jobDetails: 'fix the human',
         jobPay: '500,000-600,000',
         jobSkill: 'eye-chart temperature'
         
     }
+    {
+        jobName:'Forensic Scientist',
+        jobDetails: 'Apply scientific principles, techniques and laboratory methods to analyze phyical evidence from crime scenes.',
+        jobPay: '$58-67K/yr',
+        jobSkill: 'Expertise in laboratory equipment, data analysis software, and scientific methodologies.'
+        
+    }
+    
 ];
 
 
