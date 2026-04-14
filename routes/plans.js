@@ -10,7 +10,8 @@ const {
   updatePlanCourse,
   removeCourseFromPlan,
   getSemesterCourses,
-  duplicatePlan
+  duplicatePlan,
+  validatePlanController
 } = require('../controllers/planController');
 
 // Plan routes (Person 1 will add auth middleware later)
@@ -27,4 +28,9 @@ router.put('/:id/courses/:courseId', updatePlanCourse);
 router.delete('/:id/courses/:courseId', removeCourseFromPlan);
 router.get('/:id/semesters/:semester/:year', getSemesterCourses);
 
+// Validate a student's course plan by checking prerequisites
+// @route   POST /api/plans/validate
+router.post('/validate', validatePlanController);
+
 module.exports = router;
+ 

@@ -2,6 +2,7 @@ const Plan = require('../models/Plan');
 const PlanCourse = require('../models/PlanCourse');
 const Course = require('../models/Course');
 const mongoose = require('mongoose');
+const { validatePlan } = require('../services/planValidator');
 
 // @desc    Get all plans for user
 // @route   GET /api/plans
@@ -395,5 +396,21 @@ exports.duplicatePlan = async (req, res, next) => {
     next(error);
   } finally {
     session.endSession();
+  }
+};
+// @desc    Validate a plan
+// @route   POST /api/plans/validate
+exports.validatePlanController = async (req, res, next) => {
+  try {
+    const { planCourses, completedCourses } = req.body;
+
+    const result = validatePlan(planCourses, completedCourses);
+
+    res.json({
+      success: true,
+      data: result
+    });
+  } catch (error) {
+    next(error);
   }
 };
