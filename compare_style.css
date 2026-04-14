@@ -1,5 +1,14 @@
 
-.Welcome .welcomebtn{
+.Welcome {
+    font-family: Arial, Times, serif;
+    padding: 100px;
+    margin-top: 10%;
+    background-color: black;
+    
+}
+
+/* Old code */
+/* .Welcome .welcomebtn{
     font-family: Arial, Times, serif;
     font-size: xx-large;
     border: 3px solid rgb(0, 0, 0);
@@ -111,4 +120,4 @@
   background-color: #FDD023;
   color: white;
 
-}
+} */
