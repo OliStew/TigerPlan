@@ -1,57 +1,56 @@
-
 .Welcome {
-    font-family: Arial, Times, serif;
-    padding: 100px;
-    margin-top: 10%;
-    /* background-color: rgb(117, 117, 117); */
-    
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 100px;
+  margin-top: 10%;
+  /* background-color: rgb(117, 117, 117); */
 }
 
 
-.Welcome .title h1{
-    text-align: center;
-    font-weight: 550;
-    
+.Welcome .title h1 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 40px;
 }
 
-.Welcome .title p{
-    text-align: center;
-    
+.Welcome .title p {
+  text-align: center;
+  font-size: 20px;
+  color: #808080;
 }
 
 /* to costumize buttons, use the name of the tag which is <button> not the name of the class*/
-.Welcome button{
-   border-radius: 12px;
+.Welcome button {
+  border-radius: 11px;
   border: none;
   text-decoration: none;
-  padding: 10px 15px;
+  padding: 10px;
   margin-top: 5px;
-  margin: 20px;
+  margin: 10px;
   font-size: 20px;
-  color:white;
-    
+  color: white;
+
 }
 
-.Welcome .welcomebtn .btn-secondary{
-   float: left;
-   background-color: #FDD023;
-  
+.Welcome .welcomebtn .btn-secondary {
+  float: left;
+  background-color: #FDD023;
+
 }
 
-.Welcome .welcomebtn .btn-primary{
-   float: right;
-   background-color: #461D7C;
-  
+.Welcome .welcomebtn .btn-primary {
+  float: right;
+  background-color: #461D7C;
+
 }
 
-.Welcome .btn-secondary:hover{
-   background-color: #e0b31e;
-    
+.Welcome .btn-secondary:hover {
+  background-color: #e0b31e;
+
 }
 
-.Welcome .btn-primary:hover{
-   background-color: #230e3f;
-    
+.Welcome .btn-primary:hover {
+  background-color: #230e3f;
+
 }
 
 
