@@ -1,0 +1,10 @@
+# database file — everyone generates their own by running npm run seed
+tigerplan.db
+tigerplan.db-shm
+tigerplan.db-wal
+
+# dependencies — reinstalled with npm install
+node_modules/
+
+# Mac junk
+.DS_Store
