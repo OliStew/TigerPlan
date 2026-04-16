@@ -1,10 +1,9 @@
 .Welcome {
   font-family: Arial, Helvetica, sans-serif;
-  padding: 100px;
+  padding: 50px;
   margin-top: 10%;
-  /* background-color: rgb(117, 117, 117); */
+ 
 }
-
 
 .Welcome .title h1 {
   text-align: center;
@@ -18,153 +17,102 @@
   color: #808080;
 }
 
-/* to costumize buttons, use the name of the tag which is <button> not the name of the class*/
-.Welcome button {
-  border-radius: 11px;
-  border: none;
-  text-decoration: none;
-  padding: 10px;
-  margin-top: 5px;
-  margin: 10px;
+.maintContent {
+  padding: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  gap: 25px;
+
+}
+
+.containers {
+  padding: 25px;
+  border-radius: 12px;
+  border: 2px solid;
+  border-color: #c9c8c8;
+  background-color: #ffffff;
+  font-size: 15px;
+  line-height: 5px;
+  width: 50%;
+}
+
+.containers h1 {
   font-size: 20px;
-  color: white;
-
+  font-weight: 700;
 }
 
-.Welcome .welcomebtn .btn-secondary {
-  float: left;
-  background-color: #FDD023;
-
-}
-
-.Welcome .welcomebtn .btn-primary {
-  float: right;
-  background-color: #461D7C;
-
-}
-
-.Welcome .btn-secondary:hover {
-  background-color: #e0b31e;
-
-}
-
-.Welcome .btn-primary:hover {
-  background-color: #230e3f;
-
+.containers p {
+  font-size: 15px;
+  color: #808080;
 }
 
 
-/* Old code */
-/* .Welcome .welcomebtn{
-    font-family: Arial, Times, serif;
-    font-size: xx-large;
-    border: 3px solid rgb(0, 0, 0);
-    cursor: pointer;
-
-    padding: 20px 10px;
-    margin-top: 15%;
-    display: flex;
-    gap: 600px;
-    background-color: black;
-    
-    
-}
- 
-
-<!--Button-->
-.Welcome .btn-secondary{
-    background-color: #999999;
-    color: white;
-    text-align: center;
-
-
-}
-.Welcome .btn-primary{
-    background-color: #461d7c;
-    color: white;
-    text-align: center;
-
-}
-<!--Hover-->
-.Welcome .btn-secondary:hover{
-    background-color: #999999;
-    color: white;
-    text-align: center;
-    border: 3px solid #999999;
-    opacity: 0.5;
+.searchArrow {
+    position: absolute;
+    pointer-events: none;
+    margin-left: -30px;
+    margin-top: 6px;
+    color: #808080;
 }
 
-.Welcome .btn-primary:hover{
-    background-color: #461d7c;
-    color:white;
-    text-align: center;
-    opacity: 0.5;
-    
+.searchBar #majorInput1,
+.searchBar #majorInput2 {
+    background-color: rgb(228, 228, 228);
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+    font-weight: 500;
+    color: #808080
 }
 
-<!--Active-->
-.Welcome .btn-secondary:active{
-    background-color: #999999;
-    color: white;
-    text-align: center;
-    border: 3px solid #999999;
+.dropDown {
+  padding: 25px;
+   width: 100%;
+   display: flex;
+   gap: 50px;
 }
 
-.Welcome .btn-primary:active{
-    background-color: #461d7c;
-    color: white;
-    height: 55px;
-    width: 160px;
-    text-align: center;
-    border: 3px solid #461d7c;
-}
-<!Major-->
-.Major {
-    
-  width: 200px;
-  height: 150px;
-  overflow-y: auto;
-}
-
-.Major a {
-  background-color: #eee;
-  color: black;
-  display: block;
-  padding: 12px;
-  text-decoration: none;
+#majorDropdown1,
+#majorDropdown2 {
+    margin-top: -3%;
+    margin-left: 25px;
+    margin-right: 25px;
+    width: 50%;
+    border-radius: 12px;
+    border: 1px solid;
+    border-color: #c9c8c8;
+    background-color: #ffffff;
+    font-size: 15px;
+    box-shadow: 0px 5px 5px #00000033;
+    display: block;
+    transition: 0.2s;
+    z-index: 1;
 }
 
-.Major a:hover {
-  background-color: #FDD023;
+#majorDropdown1 #headerName,
+#majorDropdown2 #headerName {
+    margin-left: 10px;
+    font-weight: 550;
+    border-radius: 10px;
+    padding-right: 97%;
+    font-size: 20px;
+    color:#808080;
 }
 
-.Major a.active {
-  background-color: #FDD023;
-  color: white;
-
-}
-<!Minor-->
-.Minor{
-    
-  width: 200px;
-  height: 150px;
-  overflow-y: auto;
-}
-
-.Minor a {
-  background-color: #eee;
-  color: black;
-  display: block;
-  padding: 12px;
-  text-decoration: none;
+#majorDropdown1 a,
+#majorDropdown2 a {
+    margin: 3px;
+    margin-left: 25px;
+    border-radius: 10px;
+    padding: 5px 15px;
+    display: block;
+    color: #000000;
+    text-decoration: none;
+    transition: 0.5s;
 }
 
-.Minor a:hover {
-  background-color: #FDD023;
+#majorDropdown1 a:hover,
+#majorDropdown2 a:hover {
+    background-color: #e4e4e4;
 }
-
-.Minor a.active {
-  background-color: #FDD023;
-  color: white;
-
-} */
