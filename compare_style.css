@@ -9,13 +9,16 @@
     margin-top: 15%;
     display: flex;
     gap: 600px;
-    background-color: black;
+    background-color: Black;
+    
+    
+    text-align: center;
     
     
 }
  
 
-<!--Button-->
+/*--Button--*/
 .Welcome .btn-secondary{
     background-color: #999999;
     color: white;
@@ -27,11 +30,12 @@
     background-color: #461d7c;
     color: white;
     text-align: center;
+    
 
 }
-<!--Hover-->
+/*--Hover--*/
 .Welcome .btn-secondary:hover{
-    background-color: #999999;
+    background-color:  #999999;
     color: white;
     text-align: center;
     border: 3px solid #999999;
@@ -42,11 +46,12 @@
     background-color: #461d7c;
     color:white;
     text-align: center;
+    border" : 3px solid #461d7c;
     opacity: 0.5;
     
 }
 
-<!--Active-->
+/*--Active--*/
 .Welcome .btn-secondary:active{
     background-color: #999999;
     color: white;
@@ -62,9 +67,9 @@
     text-align: center;
     border: 3px solid #461d7c;
 }
-<!Major-->
+/*--Major--*/
 .Major {
-    
+  
   width: 200px;
   height: 150px;
   overflow-y: auto;
@@ -87,7 +92,7 @@
   color: white;
 
 }
-<!Minor-->
+/*--Minor--*/
 .Minor{
     
   width: 200px;
