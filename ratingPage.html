@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ratings – TigerPlan</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #fff;
+    }
+
+    .filter-bar {
+      padding: 10px;
+      border-bottom: 1px solid black;
+    }
+
+    .filter-bar select {
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 4px;
+      margin-right: 10px;
+    }
+
+    .review-card {
+      border: 1px solid black;
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+
+    .review-card .program-name {
+      font-weight: bold;
+    }
+
+    .review-card .badge-type {
+      background-color: lightgray;
+      padding: 2px 6px;
+      margin-left: 6px;
+      font-size: 0.8rem;
+    }
+
+    .review-card .reviewer-info {
+      color: gray;
+      font-size: 0.85rem;
+      margin-top: 4px;
+    }
+
+    .review-card .overall-label {
+      font-size: 0.8rem;
+      color: gray;
+      text-align: right;
+    }
+
+    .stars {
+      color: orange;
+      font-size: 1.1rem;
+    }
+
+    .stars .empty {
+      color: lightgray;
+    }
+
+    .stats-row {
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px 0;
+      display: flex;
+    }
+
+    .stat-box {
+      flex: 1;
+      padding: 0 10px;
+      border-right: 1px solid #ccc;
+    }
+
+    .stat-box:first-child {
+      padding-left: 0;
+    }
+
+    .stat-box:last-child {
+      border-right: none;
+    }
+
+    .stat-box .stat-label {
+      font-size: 0.8rem;
+      color: gray;
+    }
+
+    .stat-box .stat-value {
+      font-weight: bold;
+      color: #461d7c;
+    }
+
+    .review-text {
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+
+    .summary-bar {
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 15px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .summary-stat {
+      flex: 1;
+      min-width: 120px;
+      padding: 5px 10px;
+      border-right: 1px solid #ccc;
+      text-align: center;
+    }
+
+    .summary-stat:last-child {
+      border-right: none;
+    }
+
+    .summary-stat .s-label {
+      font-size: 0.8rem;
+      color: gray;
+    }
+
+    .summary-stat .s-value {
+      font-weight: bold;
+      color: #461d7c;
+    }
+
+    #noResults {
+      display: none;
+      text-align: center;
+      padding: 20px;
+      color: gray;
+    }
+
+    .page-content {
+      margin-top: 160px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <img src="IMAGES/tiger-logo-Y.png" alt="Logo" id="logo">
+    <a href="index.html" id="title">THE TIGER PLAN</a>
+    <div class="header-right">
+      <a href="#Profile">PROFILE</a>
+    </div>
+
+  </div>
+  <div id="navbar">
+    <a href="index.html">Home</a>
+    <a href="comparindex.html">Compare</a>
+    <a href="careerSearchIndex.html">Careers</a>
+    <a href="ratingPage.html">Ratings</a>
+  </div>
+
+  
+  <div class="page-content">
+
+  <div class="filter-bar">
+    <div class="container d-flex align-items-center gap-3 flex-wrap">
+      <strong style="font-size:0.9rem;">Filter by:</strong>
+
+      
+      <select id="filterProgram" onchange="applyFilters()">
+        <option value="all">All Programs</option>
+        <option value="Computer Science">Computer Science</option>
+        <option value="Business Administration">Business Administration</option>
+        <option value="Psychology">Psychology</option>
+        <option value="Mathematics">Mathematics</option>
+        <option value="Digital Media">Digital Media</option>
+      </select>
+
+      
+      <select id="filterType" onchange="applyFilters()">
+        <option value="all">Major &amp; Minor</option>
+        <option value="Major">Major</option>
+        <option value="Minor">Minor</option>
+      </select>
+
+      
+      <button
+        onclick="clearFilters()"
+        class="btn btn-sm"
+        style="border-radius:20px; border:1px solid #ccc; font-size:0.85rem;"
+      >
+        Clear Filters
+      </button>
+    </div>
+  </div>
+
+  
+  <div class="container my-4" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+
+    
+    <div class="summary-bar">
+      <div class="summary-stat">
+        <div class="s-label">Avg Rating</div>
+        <div class="s-value" id="avgRating">— <span>/ 5</span></div>
+      </div>
+      <div class="summary-stat">
+        <div class="s-label">Avg Difficulty</div>
+        <div class="s-value" id="avgDifficulty">— <span>/ 5</span></div>
+      </div>
+      <div class="summary-stat">
+        <div class="s-label">Avg GPA</div>
+        <div class="s-value" id="avgGPA">—</div>
+      </div>
+      <div class="summary-stat">
+        <div class="s-label">Avg Job Offers</div>
+        <div class="s-value" id="avgJobs">—</div>
+      </div>
+    </div>
+
+    
+    <div id="reviewList"></div>
+
+    
+    <div id="noResults">
+      <p>No reviews match your filters. Try clearing them!</p>
+    </div>
+
+  </div>
+
+  
+  </div>
+
+  <script
+    src="https:
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+
+    const reviews = [
+      {
+        program:    "Computer Science",
+        type:       "Major",
+        reviewer:   "Mike T.",
+        classYear:  "Class of 2024",
+        rating:     4,
+        difficulty: 4,
+        gpa:        3.7,
+        jobOffers:  4,
+        review:     "Great program with excellent professors. The curriculum is challenging but prepares you well for industry."
+      },
+      {
+        program:    "Business Administration",
+        type:       "Major",
+        reviewer:   "Sarah L.",
+        classYear:  "Class of 2025",
+        rating:     5,
+        difficulty: 3,
+        gpa:        3.8,
+        jobOffers:  6,
+        review:     "Loved the networking opportunities and real-world case studies. Highly recommend for anyone interested in management."
+      },
+      {
+        program:    "Psychology",
+        type:       "Major",
+        reviewer:   "James R.",
+        classYear:  "Class of 2023",
+        rating:     3,
+        difficulty: 3,
+        gpa:        3.4,
+        jobOffers:  2,
+        review:     "Interesting coursework but limited direct job placement. Best paired with a minor or graduate school plans."
+      },
+      {
+        program:    "Mathematics",
+        type:       "Minor",
+        reviewer:   "Aisha K.",
+        classYear:  "Class of 2024",
+        rating:     4,
+        difficulty: 5,
+        gpa:        3.2,
+        jobOffers:  3,
+        review:     "Tough but worth it. Boosted my analytical skills a lot. The professors are very approachable if you ask for help."
+      },
+      {
+        program:    "Digital Media",
+        type:       "Minor",
+        reviewer:   "Carlos M.",
+        classYear:  "Class of 2025",
+        rating:     5,
+        difficulty: 2,
+        gpa:        3.9,
+        jobOffers:  5,
+        review:     "Super fun and creative minor. Great for anyone in CS or Business who wants design skills on their resume."
+      }
+    ];
+
+    function renderStars(rating) {
+      let html = '<span class="stars">';
+      for (let i = 1; i <= 5; i++) {
+        if (i <= rating) {
+          html += '★';
+        } else {
+          html += '<span class="empty">★</span>';
+        }
+      }
+      html += '</span>';
+      return html;
+    }
+
+    function buildCard(r) {
+      return `
+        <div class="review-card">
+
+          
+          <div class="d-flex justify-content-between align-items-start flex-wrap">
+            <div>
+              <span class="program-name">${r.program}</span>
+              <span class="badge-type">${r.type}</span>
+              <div class="reviewer-info">
+                ${r.reviewer} &nbsp; ${r.classYear}
+              </div>
+            </div>
+            <div class="text-end">
+              ${renderStars(r.rating)}
+              <div class="overall-label">Overall Rating</div>
+            </div>
+          </div>
+
+          
+          <div class="stats-row">
+            <div class="stat-box">
+              <div class="stat-label">Difficulty</div>
+              <div class="stat-value">${r.difficulty} <span>/ 5</span></div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-label">GPA</div>
+              <div class="stat-value">${r.gpa.toFixed(1)}</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-label">Avg Job Offers</div>
+              <div class="stat-value">${r.jobOffers}</div>
+            </div>
+          </div>
+
+          
+          <div class="review-text">
+            <strong>Review:</strong>
+            <em>"${r.review}"</em>
+          </div>
+
+        </div>
+      `;
+    }
+
+    function updateSummary(list) {
+
+      if (list.length === 0) {
+        document.getElementById('avgRating').innerHTML     = '— <span>/ 5</span>';
+        document.getElementById('avgDifficulty').innerHTML = '— <span>/ 5</span>';
+        document.getElementById('avgGPA').textContent      = '—';
+        document.getElementById('avgJobs').textContent     = '—';
+        return;
+      }
+
+      function avg(key) {
+        return (list.reduce((sum, r) => sum + r[key], 0) / list.length).toFixed(1);
+      }
+
+      document.getElementById('avgRating').innerHTML     = avg('rating')     + ' <span>/ 5</span>';
+      document.getElementById('avgDifficulty').innerHTML = avg('difficulty') + ' <span>/ 5</span>';
+      document.getElementById('avgGPA').textContent      = avg('gpa');
+      document.getElementById('avgJobs').textContent     = avg('jobOffers');
+    }
+
+    function applyFilters() {
+      const programFilter = document.getElementById('filterProgram').value;
+      const typeFilter    = document.getElementById('filterType').value;
+
+      const filtered = reviews.filter(function(r) {
+        const matchProgram = (programFilter === 'all') || (r.program === programFilter);
+        const matchType    = (typeFilter === 'all')    || (r.type === typeFilter);
+        return matchProgram && matchType;
+      });
+
+      renderCards(filtered);
+      updateSummary(filtered);
+    }
+
+    function renderCards(list) {
+      const container = document.getElementById('reviewList');
+      const noResults = document.getElementById('noResults');
+
+      if (list.length === 0) {
+        container.innerHTML = '';
+        noResults.style.display = 'block';
+      } else {
+        noResults.style.display = 'none';
+
+        container.innerHTML = list.map(buildCard).join('');
+      }
+    }
+
+    applyFilters();
+
+    function clearFilters() {
+      document.getElementById('filterProgram').value = 'all';
+      document.getElementById('filterType').value    = 'all';
+      applyFilters();
+    }
+  </script>
+
+</body>
+</html>

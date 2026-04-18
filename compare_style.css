@@ -1,114 +1,286 @@
-
-.Welcome .welcomebtn{
-    font-family: Arial, Times, serif;
-    font-size: xx-large;
-    border: 3px solid rgb(0, 0, 0);
-    cursor: pointer;
-
-    padding: 20px 10px;
-    margin-top: 15%;
-    display: flex;
-    gap: 600px;
-    background-color: black;
-    
-    
+.Welcome {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 50px;
+  margin-top: 10%;
+}
+ 
+.Welcome .title h1 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 40px;
+}
+ 
+.Welcome .title p {
+ 
+  text-align: center;
+  font-size: 20px;
+  color: #808080;
+}
+ 
+.maintContent {
+  padding: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  gap: 25px;
+}
+ 
+.containers {
+  padding: 25px;
+  border-radius: 12px;
+  border: 2px solid;
+  border-color: #c9c8c8;
+  background-color: #ffffff;
+  font-size: 15px;
+  line-height: 1.5;  
+  width: 50%;
+}
+ 
+.containers h1 {
+  font-size: 20px;
+  font-weight: 700;
+}
+ 
+.containers p {
+  font-size: 15px;
+  color: #808080;
+}
+ 
+.searchArrow {
+  position: absolute;
+  pointer-events: none;
+  margin-left: -30px;
+  margin-top: 6px;
+  color: #808080;
+}
+ 
+.searchBar #majorInput1,
+.searchBar #majorInput2 {
+  background-color: rgb(228, 228, 228);
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  font-weight: 500;
+  color: #808080;
+}
+ 
+.dropDown {
+  padding: 25px;
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  position: absolute;
+}
+ 
+#majorDropdown1,
+#majorDropdown2 {
+  margin-top: -3%;
+  margin-left: 25px;
+  margin-right: 25px;
+  top: 10%;
+  width: 50%;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #c9c8c8;
+  background-color: #ffffff;
+  font-size: 15px;
+  box-shadow: 0px 5px 5px #00000033;
+  display: block;
+  transition: 0.2s;
+  z-index: 1;
+}
+ 
+#majorDropdown1 #headerName,
+#majorDropdown2 #headerName {
+  margin-left: 10px;
+  font-weight: 550;
+  border-radius: 10px;
+  padding-right: 97%;
+  font-size: 20px;
+  color: #808080;
+}
+ 
+#majorDropdown1 a,
+#majorDropdown2 a {
+  margin: 3px;
+  margin-left: 25px;
+  border-radius: 10px;
+  padding: 5px;
+  display: block;
+  color: #000000;
+  text-decoration: none;
+  transition: 0.5s;
+}
+ 
+#majorDropdown1 a:hover,
+#majorDropdown2 a:hover {
+  background-color: #e4e4e4;
 }
  
 
-<!--Button-->
-.Welcome .btn-secondary{
-    background-color: #999999;
-    color: white;
-    text-align: center;
-
-
+.infoGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  line-height: 1.5;
 }
-.Welcome .btn-primary{
-    background-color: #461d7c;
-    color: white;
-    text-align: center;
-
+ 
+.infoGroup .info-label {
+  color: #808080;
+  font-size: 15px;
+  font-weight: 550;
 }
-<!--Hover-->
-.Welcome .btn-secondary:hover{
-    background-color: #999999;
-    color: white;
-    text-align: center;
-    border: 3px solid #999999;
-    opacity: 0.5;
+ 
+.infoGroup .info-value {
+  color: #000000;
+  font-size: 15px;
+  font-weight: 550;
 }
-
-.Welcome .btn-primary:hover{
-    background-color: #461d7c;
-    color:white;
-    text-align: center;
-    opacity: 0.5;
-    
+ 
+#Infomation1,
+#Infomation2 {
+  display: none;
+  padding: 25px;
 }
-
-<!--Active-->
-.Welcome .btn-secondary:active{
-    background-color: #999999;
-    color: white;
-    text-align: center;
-    border: 3px solid #999999;
+ 
+#compareResults {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  display: none;
 }
-
-.Welcome .btn-primary:active{
-    background-color: #461d7c;
-    color: white;
-    height: 55px;
-    width: 160px;
-    text-align: center;
-    border: 3px solid #461d7c;
+ 
+.summaryResults .summary-p1 {
+  padding: 10px;
+  margin: 15px;
+  border-radius: 12px;
+  border: 2px solid;
+  border-color: #c5ffc5;
+  background-color: #eeffee;
+  color: #0d3d0d;
+  font-size: 17px;
 }
-<!Major-->
-.Major {
-    
-  width: 200px;
-  height: 150px;
-  overflow-y: auto;
+ 
+.detailResults {
+  padding: 25px;
+  margin: 15px;
+  margin-top: 30px;
+  border-radius: 12px;
+  border: 2.5px solid;
+  border-color: #c9c8c8;
+  background-color: #ffffff;
 }
-
-.Major a {
-  background-color: #eee;
-  color: black;
-  display: block;
-  padding: 12px;
-  text-decoration: none;
+ 
+.detail-title {
+  font-weight: 550;
+  font-size: 20px;
+  margin-bottom: 4px;
 }
-
-.Major a:hover {
-  background-color: #FDD023;
+ 
+.detail-subtext {
+  font-size: 15px;
+  margin-top: 0;
+  color: #808080;
 }
-
-.Major a.active {
-  background-color: #FDD023;
-  color: white;
-
+ 
+.detailResults .legend-gold {
+  color: #9a7a00;
+  font-weight: 550;
+  font-size: 15px;
+  margin: 4px 0;
 }
-<!Minor-->
-.Minor{
-    
-  width: 200px;
-  height: 150px;
-  overflow-y: auto;
+ 
+.detailResults .legend-purple {
+  color: #461D7C;
+  font-weight: 550;
+  font-size: 15px;
+  margin: 4px 0;
 }
+ 
 
-.Minor a {
-  background-color: #eee;
-  color: black;
-  display: block;
-  padding: 12px;
-  text-decoration: none;
+.courseCard {
+  padding: 12px 14px;
+  margin-top: 12px;
+  border-radius: 12px;
+  border: 2.5px solid;
+  line-height: 1.4;  
 }
-
-.Minor a:hover {
-  background-color: #FDD023;
+ 
+.courseCard.overlap {
+  border-color: #FDD023;
+  background-color: #fff2bc;
+  color: #69570f;
 }
+ 
+.courseCard.equivalent {
+  border-color: #461D7C;
+  background-color: #dcc1ff;
+  color: #250f41;
+}
+ 
+.courseCard.unique {
+  border-color: #c9c8c8;
+  background-color: #ffffff;
+  color: #000000;
+}
+ 
 
-.Minor a.active {
-  background-color: #FDD023;
-  color: white;
+.courseCard .card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+ 
+.courseCard .card-code {
+  font-size: 17px;
+  font-weight: 550;
+}
+ 
+.courseCard .card-credits {
+  font-size: 15px;
+  font-weight: 550;
+}
+ 
+.courseCard .card-name {
+  font-size: 14px;
+  margin-top: 2px;
+  opacity: 0.85;
+}
+ 
 
+.courseCard .card-equiv-note {
+  font-size: 13px;
+  margin-top: 4px;
+  font-style: italic;
+  opacity: 0.75;
+}
+ 
+.resultContainers {
+  display: flex;
+  gap: 25px;
+}
+ 
+.Container1,
+.Container2 {
+  padding: 20px;
+  margin-top: 15px;
+  margin: 15px;
+  width: 50%;
+  border-radius: 12px;
+  border: 2.5px solid;
+  border-color: #c9c8c8;
+  background-color: #ffffff;
+  line-height: 1.5;  
+}
+ 
+.container-title {
+  font-weight: 550;
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+ 
+.container-subtext {
+  font-size: 15px;
+  margin-top: 0;
+  color: #808080;
 }

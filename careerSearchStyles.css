@@ -1,0 +1,195 @@
+.selectContent {
+    margin-top: 85px;
+    padding: 125px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.selectContent #topContent h1 {
+    color: #000000;
+    font-weight: 900;
+    text-align: center;
+}
+
+.selectContent #topContent p {
+    font-size: 20px;
+    text-align: center;
+    color: #808080;
+}
+
+.searchContainer {
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px solid;
+    border-color: #c9c8c8;
+    background-color: #ffffff;
+    font-size: 15px;
+    line-height: 5px;
+}
+
+.searchContainer #p1 {
+    font-weight: 700;
+}
+
+.searchContainer #p2 {
+    color: #808080;
+}
+
+.searchArrow {
+    position: absolute;
+    pointer-events: none;
+    margin-left: -30px;
+    margin-top: 6px;
+    color: #808080;
+}
+
+.dropdown1 #majorInput {
+    background-color: rgb(228, 228, 228);
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+    font-weight: 500;
+    color: #808080
+}
+
+#majorDropdown {
+    margin-top: -20px;
+    margin-left: 28px;
+    position: absolute;
+    width: 80%;
+    border-radius: 12px;
+    border: 1px solid;
+    border-color: #c9c8c8;
+    background-color: #ffffff;
+    font-size: 15px;
+    box-shadow: 0px 5px 5px #00000033;
+    display: block;
+    transition: 0.2s;
+
+
+}
+
+#majorDropdown a {
+    margin: 3px;
+    border-radius: 10px;
+    padding: 5px 15px;
+    display: block;
+    color: #000000;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+#majorDropdown a:hover {
+    background-color: #e4e4e4;
+
+}
+
+#optionsPlaceHolder {
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px dashed;
+    border-color: #c9c8c8;
+    background-color: #ffffff;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    color: #808080;
+    display: block;
+}
+
+.selectContent h1 {
+    margin-top: 50px;
+    font-size: 25px;
+    font-weight: 900;
+    color: #000000;
+    display: block;
+}
+.careerContent {
+    position: relative;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.careerContent--show {
+    display: grid;
+}
+
+.card {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 12px;
+    border: 3px solid;
+    border-color: #c9c8c8;
+    background-color: #ffffff;
+    font-size: 15px;
+    line-height: 5px;
+   
+}
+
+.card:hover{
+    border-color: #461D7C;
+    border: 3px solid;
+}
+
+.card .job-name {
+    font-size: 15px;
+    line-height: 5px;
+    font-weight: 600;
+}
+
+.card .job-details {
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 15px;
+    color: #808080;
+}
+
+.card .job-pay {
+    margin-top: 10px;
+    font-size: 11px;
+    line-height: 5px;
+    font-weight: 550;
+}
+
+.card #p1 {
+    margin-top: 12px;
+    font-size: 11px;
+    line-height: 5px;
+    font-weight: 550;
+    color: #5c5c5c;
+}
+
+.card .jobSkillTag {
+    font-size: 11px;
+    font-weight: 550;
+    border-radius: 6px;
+    background-color:#c9c8c8;
+    text-align: center;
+    display: flex;
+    width: fit-content;
+    padding: 6px 10px;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.card .job-skills {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 8px;
+   margin-top: 5px;
+}
+
+.suitCase {
+    position: relative;
+    top: 5px;
+    left: -1px;
+}
+
+.dollarSign {
+    position: relative;
+    top: 3.5px;
+}

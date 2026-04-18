@@ -7,69 +7,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Comparing System</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="compare_style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
 
+<body>
+    <!-- ** "Div" code should always go into the body, not the head **-->
 
     <!--Olivia's Code for body and navigation bar-->
     <!-- Top LOGO, Profile and Search Bar-->
     <div class="header">
         <img src="IMAGES/tiger-logo-Y.png" alt="Logo" id="logo">
-        <a href="#default" id="title">THE TIGER PLAN</a>
+        <a href= "index.html" id="title">THE TIGER PLAN</a>
         <div class="header-right">
             <a href="#Profile">PROFILE</a>
         </div>
     </div>
-    
+
 
     <!-- Navigation Bar-->
     <div id="navbar">
         <a href="index.html">Home</a>
-        <a href="#compare">Compare</a>
+        <a href="comparindex.html">Compare</a>
         <a href="careerSearchIndex.html">Careers</a>
-        <a href="#ratings">Ratings</a>
+        <a href="ratingPage.html">Ratings</a>
     </div>
     <link rel="stylesheet" href="styles.css">
     <!--End of Olivia's Code for body and navigation bar-->
 
 
-</head>
-<body>
-    <div class = "Welcome">
-        <h1>Welcome to the Comparing System</h1>
-        <p> Pick your major and minor to compare their curriculum</p>
-
-        <div class= "welcomebtn">
-        <button class="btn btn-secondary">Redo</button> <!--Redo button-->
-        <button class="btn btn-primary">Compare and Save</button> <!--Compare and Save button-->
+    <div class="Welcome">
+        <div class="title">
+            <h1>Welcome to the Compare System</h1>
+            <p>Pick your major or minor to compare their curriculum</p>
         </div>
     </div>
 
-    
+    <div class="maintContent">
 
-    <div class="Major">
-        <h2>Major</h2>
-        <a href="#" class="active">"Home"</a>
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-        <a href="#">Link 4</a>
+
+        <div class="containers">
+
+            <h1>First Program</h1>
+            <p>Select a major or minor</p>
+            <div class="searchBar">
+                <input type="text" placeholder="Search for a major..." id="majorInput1" onkeyup="filterMajors1()"
+                    onmousedown="showMajors1()"> <i class="material-icons searchArrow">keyboard_arrow_down</i>
+            </div>
+
+            <div id="Infomation1" style="display: none;">
+
+
+            </div>
+        </div>
+
+
+        <div class="containers">
+
+            <h1>Second Program</h1>
+            <p>Select a major or minor</p>
+            <div class="searchBar">
+                <input type="text" placeholder="Search for a major..." id="majorInput2" onkeyup="filterMajors2()"
+                    onmousedown="showMajors2()"> <i class="material-icons searchArrow">keyboard_arrow_down</i>
+            </div>
+
+            <div id="Infomation2" style="display: none;">
+
+            </div>
+        </div>
+
+    </div>
     </div>
 
-    <div class="Minor">
-        <h2>Minor</h2>
-        <a href="#" class="active">"Home"</a>
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-        <a href="#">Link 4</a>
+    <div class="dropDown">
+        <div id="majorDropdown1" class="dropdown-content" style="opacity: 0; pointer-events: none;">
+            <a2 style="pointer-events: none;" id="headerName">Major</a2>
+            <a href="#" onclick="majorClicked1(this)">Computer Science - Software Engineering</a>
+            <a href="#" onclick="majorClicked1(this)">Mathematics</a>
+            <a href="#" onclick="majorClicked1(this)">Business Analytics</a>
+            <a href="#" onclick="majorClicked1(this)">Electrical Engineering</a>
+            <a2 style="pointer-events: none;" id="headerName">Minor</a2>
+            <a href="#" onclick="majorClicked1(this)">Statistics Minor</a>
+            <a href="#" onclick="majorClicked1(this)">Energy Minor</a>
+            <a href="#" onclick="majorClicked1(this)">Entrepreneurship Minor</a>
+        </div>
+
+
+        <div id="majorDropdown2" class="dropdown-content" style="opacity: 0; pointer-events: none;">
+            <a2 style="pointer-events: none;" id="headerName">Major</a2>
+            <a href="#" onclick="majorClicked2(this)">Computer Science - Software Engineering</a>
+            <a href="#" onclick="majorClicked2(this)">Mathematics</a>
+            <a href="#" onclick="majorClicked2(this)">Business Analytics</a>
+            <a href="#" onclick="majorClicked2(this)">Electrical Engineering</a>
+            <a2 style="pointer-events: none;" id="headerName">Minor</a2>
+            <a href="#" onclick="majorClicked2(this)">Statistics Minor</a>
+            <a href="#" onclick="majorClicked2(this)">Energy Minor</a>
+            <a href="#" onclick="majorClicked2(this)">Entrepreneurship Minor</a>
+        </div>
     </div>
 
+    <div id="compareResults">
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </div>
+
+    <script type="module" src="compareScript.js"></script>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
