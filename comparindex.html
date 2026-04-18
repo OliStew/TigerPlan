@@ -58,6 +58,30 @@
                 <input type="text" placeholder="Search for a major..." id="majorInput1" onkeyup="filterMajors1()"
                     onmousedown="showMajors1()"> <i class="material-icons searchArrow">keyboard_arrow_down</i>
             </div>
+
+            <div id="Infomation1">
+
+                <div id="group">
+                    <p>Type:</p>
+                    <p>Major</p>
+                </div>
+
+                <div id="group">
+                    <p>Department:</p>
+                    <p>engineering</p>
+                </div>
+
+                <div id="group">
+                    <p>Total Credits:</p>
+                    <p>125</p>
+                </div>
+
+                <div id="group">
+                    <p>Min GPA</p>
+                    <p>2.5</p>
+                </div>
+
+            </div>
         </div>
 
 
@@ -69,38 +93,150 @@
                 <input type="text" placeholder="Search for a major..." id="majorInput2" onkeyup="filterMajors2()"
                     onmousedown="showMajors2()"> <i class="material-icons searchArrow">keyboard_arrow_down</i>
             </div>
+
+            <div id="Infomation2">
+
+                <div id="group">
+                    <p>Type:</p>
+                    <p>Major</p>
+                </div>
+
+                <div id="group">
+                    <p>Department:</p>
+                    <p>engineering</p>
+                </div>
+
+                <div id="group">
+                    <p>Total Credits:</p>
+                    <p>125</p>
+                </div>
+
+                <div id="group">
+                    <p>Min GPA</p>
+                    <p>2.5</p>
+                </div>
+
+            </div>
         </div>
+
+    </div>
     </div>
 
     <div class="dropDown">
-        <div id="majorDropdown1" class="dropdown-content"  style="opacity: 0; pointer-events: none;">
-            <a2 style="pointer-events: none;" id="headerName" >Major</a2>
-            <a href="#" onclick="majorClicked(this)">Computer Science - Software Engineering</a>
-            <a href="#" onclick="majorClicked(this)">Mathematics</a>
-            <a href="#" onclick="majorClicked(this)">Business Analytics</a>
-            <a href="#" onclick="majorClicked(this)">Electrical Engineering</a>
+        <div id="majorDropdown1" class="dropdown-content" style="opacity: 0; pointer-events: none;">
+            <a2 style="pointer-events: none;" id="headerName">Major</a2>
+            <a href="#" onclick="majorClicked1(this)">Computer Science - Software Engineering</a>
+            <a href="#" onclick="majorClicked1(this)">Mathematics</a>
+            <a href="#" onclick="majorClicked1(this)">Business Analytics</a>
+            <a href="#" onclick="majorClicked1(this)">Electrical Engineering</a>
             <a2 style="pointer-events: none;" id="headerName">Minor</a2>
-            <a href="#" onclick="majorClicked(this)">Statistics Minor</a>
-            <a href="#" onclick="majorClicked(this)">Energy Minor</a>
-            <a href="#" onclick="majorClicked(this)">Economics</a>
+            <a href="#" onclick="majorClicked1(this)">Statistics Minor</a>
+            <a href="#" onclick="majorClicked1(this)">Energy Minor</a>
+            <a href="#" onclick="majorClicked1(this)">Economics</a>
         </div>
 
 
-        <div id="majorDropdown2" class="dropdown-content"  style="opacity: 0; pointer-events: none;">
+        <div id="majorDropdown2" class="dropdown-content" style="opacity: 0; pointer-events: none;">
             <a2 style="pointer-events: none;" id="headerName">Major</a2>
-            <a href="#" onclick="majorClicked(this)">Computer Science - Software Engineering</a>
-            <a href="#" onclick="majorClicked(this)">Mathematics</a>
-            <a href="#" onclick="majorClicked(this)">Business Analytics</a>
-            <a href="#" onclick="majorClicked(this)">Electrical Engineering</a>
+            <a href="#" onclick="majorClicked2(this)">Computer Science - Software Engineering</a>
+            <a href="#" onclick="majorClicked2(this)">Mathematics</a>
+            <a href="#" onclick="majorClicked2(this)">Business Analytics</a>
+            <a href="#" onclick="majorClicked2(this)">Electrical Engineering</a>
             <a2 style="pointer-events: none;" id="headerName">Minor</a2>
-            <a href="#" onclick="majorClicked(this)">Statistics Minor</a>
-            <a href="#" onclick="majorClicked(this)">Energy Minor</a>
-            <a href="#" onclick="majorClicked(this)">Economics</a>
+            <a href="#" onclick="majorClicked2(this)">Statistics Minor</a>
+            <a href="#" onclick="majorClicked2(this)">Energy Minor</a>
+            <a href="#" onclick="majorClicked2(this)">Economics</a>
         </div>
     </div>
 
+    <div id="compareResults">
 
-    <script src="compareScript.js"></script>
+        <div class="summaryResults">
+            <p id="p1">These programs share 1 course(s) for a total of 3 credits that count toward both programs.</p>
+            <div class="detailResults">
+                <p id="title">Courses</p>
+                <p id="subText">These courses count toward both programs or count as a course equivalent</p>
+                <div id="gold">
+                    <p>Gold: Overlapping Course</p>
+                </div>
+                <div id="purple">
+                    <p>Purple: Course Equivalency</p>
+                </div>
+                <div class="courseOverlap">
+                    <div id="overLap" class="courseResults">
+                        <p class="courseCode">Math</p>
+                        <p class="courseName">Calc</p>
+                        <p class="courseCredit">3 credits</p>
+                    </div>
+                    <div id="equivalent" class="courseResults">
+                        <p class="courseCode">English</p>
+                        <p class="courseName">Composition</p>
+                        <p class="courseCredit">2 credits</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="resultContainers">
+            <div class="Container1">
+                <p id="title">Computer Science</p>
+                <p id="subText">8 required courses</p>
+                <div class="coursesList">
+                    
+                    <div id="overLap" class="courseTag">
+                        <p class="courseTagCode">Math</p>
+                        <p class="courseTagName">Calc</p>
+                        <p class="courseTagCredit">3 credits</p>
+                    </div>
+            
+                    <div id="noneCompare" class="courseTag">
+                        <p class="courseTagCode">Math</p>
+                        <p class="courseTagName">Calc</p>
+                        <p class="courseTagCredit">3 credits</p>
+                    </div>
+
+                    <div id="equivalent" class="courseTag">
+                        <p class="courseTagCode">Math</p>
+                        <p class="courseTagName">Calc</p>
+                        <p class="courseTagCredit">3 credits</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="Container2">
+                <p id="title">Computer Science</p>
+                <p id="subText">8 required courses</p>
+                <div class="coursesList">
+                    
+                    <div id="overLap" class="courseTag">
+                        <p class="courseTagCode">Math</p>
+                        <p class="courseTagName">Calc</p>
+                        <p class="courseTagCredit">3 credits</p>
+                    </div>
+            
+                    <div id="noneCompare" class="courseTag">
+                        <p class="courseTagCode">Math</p>
+                        <p class="courseTagName">Calc</p>
+                        <p class="courseTagCredit">3 credits</p>
+                    </div>
+
+                    <div id="equivalent" class="courseTag">
+                        <p class="courseTagCode">Math</p>
+                        <p class="courseTagName">Calc</p>
+                        <p class="courseTagCredit">3 credits</p>
+                    </div>
+
+                </div>
+            </div>
+
+            
+
+
+        </div>
+    </div>
+
+    <script type="module" src="compareScript.js"></script>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

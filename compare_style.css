@@ -2,7 +2,7 @@
   font-family: Arial, Helvetica, sans-serif;
   padding: 50px;
   margin-top: 10%;
- 
+
 }
 
 .Welcome .title h1 {
@@ -48,71 +48,240 @@
 
 
 .searchArrow {
-    position: absolute;
-    pointer-events: none;
-    margin-left: -30px;
-    margin-top: 6px;
-    color: #808080;
+  position: absolute;
+  pointer-events: none;
+  margin-left: -30px;
+  margin-top: 6px;
+  color: #808080;
 }
 
 .searchBar #majorInput1,
 .searchBar #majorInput2 {
-    background-color: rgb(228, 228, 228);
-    width: 100%;
-    border: none;
-    border-radius: 12px;
-    padding: 10px;
-    font-weight: 500;
-    color: #808080
+  background-color: rgb(228, 228, 228);
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  font-weight: 500;
+  color: #808080
 }
 
 .dropDown {
   padding: 25px;
-   width: 100%;
-   display: flex;
-   gap: 50px;
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  position: absolute;
 }
 
 #majorDropdown1,
 #majorDropdown2 {
-    margin-top: -3%;
-    margin-left: 25px;
-    margin-right: 25px;
-    width: 50%;
-    border-radius: 12px;
-    border: 1px solid;
-    border-color: #c9c8c8;
-    background-color: #ffffff;
-    font-size: 15px;
-    box-shadow: 0px 5px 5px #00000033;
-    display: block;
-    transition: 0.2s;
-    z-index: 1;
+
+  margin-top: -3%;
+  margin-left: 25px;
+  margin-right: 25px;
+  top: 10%;
+  width: 50%;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #c9c8c8;
+  background-color: #ffffff;
+  font-size: 15px;
+  box-shadow: 0px 5px 5px #00000033;
+  display: block;
+  transition: 0.2s;
+  z-index: 1;
 }
+
 
 #majorDropdown1 #headerName,
 #majorDropdown2 #headerName {
-    margin-left: 10px;
-    font-weight: 550;
-    border-radius: 10px;
-    padding-right: 97%;
-    font-size: 20px;
-    color:#808080;
+  margin-left: 10px;
+  font-weight: 550;
+  border-radius: 10px;
+  padding-right: 97%;
+  font-size: 20px;
+  color: #808080;
 }
 
 #majorDropdown1 a,
 #majorDropdown2 a {
-    margin: 3px;
-    margin-left: 25px;
-    border-radius: 10px;
-    padding: 5px 15px;
-    display: block;
-    color: #000000;
-    text-decoration: none;
-    transition: 0.5s;
+  margin: 3px;
+  margin-left: 25px;
+  border-radius: 10px;
+  padding: 5px;
+  display: block;
+  color: #000000;
+  text-decoration: none;
+  transition: 0.5s;
 }
 
 #majorDropdown1 a:hover,
 #majorDropdown2 a:hover {
-    background-color: #e4e4e4;
+  background-color: #e4e4e4;
+}
+
+
+#Infomation1,
+#Infomation2 {
+  display: none;
+  padding: 25px;
+}
+
+#group {
+  position: static;
+  text-align: right;
+  line-height: 20px;
+
+}
+
+#group p:first-child {
+  color: #808080;
+  float: left;
+  font-size: 15px;
+  font-weight: 550;
+
+}
+
+#group p {
+  color: #ce17fc;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 550;
+
+}
+
+#compareResults {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  display: none;
+}
+
+
+.summaryResults #p1 {
+  padding: 10px;
+  margin: 15px;
+  border-radius: 12px;
+  border: 2px solid;
+  border-color: #c5ffc5;
+  background-color: #eeffee;
+  color:#0d3d0d;
+  font-size: 17px;
+}
+
+.detailResults {
+  padding: 25px;
+  margin: 15px;
+  margin-top: 30px;
+  border-radius: 12px;
+  border: 2.5px solid;
+  border-color: #c9c8c8;
+  background-color: #ffffff;
+}
+
+#title {
+  font-weight: 550;
+  font-size: 20px;
+}
+
+ #subText {
+  font-size: 15px;
+  margin-top: -10px;
+  color: #808080;
+}
+
+.detailResults #gold{
+  color: #FDD023;
+  font-weight: 550;
+  font-size: 15px;
+}
+
+.detailResults #purple{
+  color: #461D7C;
+  font-weight: 550;
+  font-size: 15px;
+}
+
+.courseResults {
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 12px;
+  border: 2.5px solid;
+}
+
+#overLap {
+
+  border-color:  #FDD023;
+  background-color:  #fff2bc;
+  color: #69570f;
+
+}
+
+#equivalent{
+  border-color:  #461D7C;
+  background-color:  #dcc1ff;
+  color: #250f41;
+}
+
+#noneCompare {
+  border-color: #c9c8c8;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.detailResults .courseOverlap .courseCode{
+    font-size: 17px;
+    font-weight: 550;
+}
+
+.detailResults .courseOverlap .courseName{
+    margin-top: -15px;
+    position: absolute;
+}
+
+.detailResults .courseOverlap .courseCredit{
+      margin-top: -35px;
+      font-weight: 550;
+      float: right;
+}
+
+.resultContainers {
+
+  display: flex;
+  gap: 25px;
+
+}
+
+.Container1, .Container2 {
+  padding: 20px;
+  margin-top: 30px;
+  margin: 15px;
+  width:50%;
+  border-radius: 12px;
+  border: 2.5px solid;
+  border-color: #c9c8c8;
+  background-color: #ffffff;
+}
+
+.courseTag  {
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 12px;
+  border: 2.5px solid;
+}
+
+.coursesList .courseTagCode{
+    font-size: 17px;
+    font-weight: 550;
+}
+
+.coursesList .courseTagName{
+    margin-top: -15px;
+    position: absolute;
+}
+
+.coursesList .courseTagCredit{
+      margin-top: -35px;
+      font-weight: 550;
+      float: right;
 }
