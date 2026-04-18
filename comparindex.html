@@ -7,11 +7,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Comparing System</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="compare_style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
 
+<body>
+    <!-- ** "Div" code should always go into the body, not the head **-->
 
     <!--Olivia's Code for body and navigation bar-->
     <!-- Top LOGO, Profile and Search Bar-->
@@ -22,7 +26,7 @@
             <a href="#Profile">PROFILE</a>
         </div>
     </div>
-    
+
 
     <!-- Navigation Bar-->
     <div id="navbar">
@@ -35,21 +39,24 @@
     <!--End of Olivia's Code for body and navigation bar-->
 
 
-</head>
-<body>
-    <div class = "Welcome">
-        <h1>Welcome to the Comparing System</h1>
-        <p> Pick your major and minor to compare their curriculum</p>
+    <div class="Welcome">
 
-        <div class= "welcomebtn">
-        <button class="btn btn-secondary">Redo</button> <!--Redo button-->
-        <button class="btn btn-primary">Compare and Save</button> <!--Compare and Save button-->
+        <div class="title">
+            <h1>Welcome to the Comparing System</h1>
+            <p> Pick your major and minor to compare their curriculum</p>
         </div>
+
+        <div class="welcomebtn">
+            <!-- I look off the *btn* so you can properly customize the button look-->
+            <button class="btn-secondary">Redo</button> <!--Redo button-->
+            <button class="btn-primary">Compare and Save</button> <!--Compare and Save button-->
+        </div>
+
     </div>
 
-    
 
-    <div class="Major">
+
+    <!-- <div class="Major">
         <h2>Major</h2>
         <a href="#" class="active">"Home"</a>
         <a href="#">Link 1</a>
@@ -65,11 +72,13 @@
         <a href="#">Link 2</a>
         <a href="#">Link 3</a>
         <a href="#">Link 4</a>
-    </div>
+    </div> -->
 
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
